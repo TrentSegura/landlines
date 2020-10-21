@@ -74,7 +74,7 @@ class Map extends Component {
             'type': 'line',
             'source': 'route',
             'layout': {
-                // 'line-join': 'round',
+                'line-join': 'round',
                 'line-cap': 'round'
             },
             'paint': {
@@ -85,9 +85,7 @@ class Map extends Component {
         })
 
 
-        places.map((place) => {
-
-
+        places.forEach((place) => {
             const coord = [place.longitude, place.latitude]
             const popup = new mapbox.Popup()
 
