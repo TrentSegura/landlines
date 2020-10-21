@@ -1,38 +1,33 @@
-.App {
-  text-align: center;
+body>*{
+  margin:0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+.Map{
+  position: relative;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.Mapoverlay{
+  position: absolute;
+  top: 02vw;
+  left: 2vw;
+  z-index: 1;
+  color: #fff;
+  font-size: 64px;
+  text-shadow: 0 0 15px rgba(0,0,0,0.6);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.Mapoverlay>*{
+  margin: 0;
+  text-transform: uppercase;
+  line-height: 1;
 }
 
-.App-link {
-  color: #61dafb;
+.Mapoverlay h1{
+  font-size: 64px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.Mapoverlay h2{
+  font-weight: 400;
+  font-size: 36px;
 }

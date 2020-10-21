@@ -2,14 +2,28 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.png" />
+
+    <!-- Adobe Typekit CSS -->
+    <link rel="stylesheet" href="https://use.typekit.net/myj5oak.css">
+
+    <!-- link to Tachyons CSS Toolkit -->
+    <link rel="stylesheet" href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css"/>
+
+
+    <!-- Link to Mapbox-GL-JS css file -->
+    <link href='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css' rel='stylesheet' />
+
+    <!-- Custom Style Sheet -->
+    <link href='style.css' rel='stylesheet' />
+
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
     <meta
       name="description"
       content="Web site created using create-react-app"
     />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <!-- <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" /> -->
     <!--
       manifest.json provides metadata used when your web app is installed on a
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
@@ -24,7 +38,7 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <title>React App</title>
+    <title>Landlines | M12 Studio</title>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
@@ -39,5 +53,46 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+    <div class="page">
+      <section class="about">
+        <div class="intro fl w-two-thirds pa2">
+          <p><span class="lede">Landlines is a two-year cultural initiative</span> developed by M12 STUDIO. The initiative will stimulate collaborative creative projects between M12 STUDIO and visiting artists, researchers, and writers who will spend time in Conejos County, Colorado. The collaborations will partner with ranchers and other landowners in the area to create site-specific artworks, events, and other creative projects. The research, events, and artworks produced will draw on a range of interests and expertise including; architecture, agriculture, photography, physiography, and contemporary and traditional village life.</p>
+        </div>
+        <div class="contributors">
+          <!-- <h3>Contributors</h3> -->
+        </div>
+      </section>
+      <section class="footer">
+        <div class="site-info">
+          <!-- Begin Mailchimp Signup Form -->
+          <div id="mc_embed_signup">
+            <form action="https://m12studio.us1.list-manage.com/subscribe/post?u=6e8702eb7c38e16e53bfa1020&amp;id=ce0eee11dc" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+            <div id="mc_embed_signup_scroll">
+              <h2>Subscribe to the<br> M12 Studio newsletter</h2>
+            <div class="flex mm-name">
+              <div class="mc-field-group">
+                <input type="text" value="" name="FNAME" class="required" id="mce-FNAME" placeholder="First Name">
+              </div>
+    
+              <div class="mc-field-group">
+                <input type="text" value="" name="LNAME" class="required" id="mce-LNAME" placeholder="Last Name">
+              </div>
+            </div>
+    
+          <div class="mc-field-group">
+            <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Email Address">
+          </div>
+            <div id="mce-responses" class="clear">
+              <div class="response" id="mce-error-response" style="display:none"></div>
+              <div class="response" id="mce-success-response" style="display:none"></div>
+            </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+            <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_6e8702eb7c38e16e53bfa1020_ce0eee11dc" tabindex="-1" value=""></div>
+            <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+            </div>
+          </form>
+          </div>
+        </div>
+      </section>
+    </div>
   </body>
 </html>
