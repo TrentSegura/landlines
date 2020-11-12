@@ -90,7 +90,9 @@ div#map {
   }
 
 
-  #ufo-marker{
+  #ufo-marker, 
+  #art-marker,
+  #mtn-marker{
     cursor: pointer;
 }
 
@@ -98,6 +100,18 @@ div#map {
     content: "🛸";
     font-size: 30px;
   }
+
+  #art-marker::after{
+    content: "🎨";
+    font-size: 30px;
+  }
+
+  #mtn-marker::after{
+    content: "⛰️";
+    font-size: 30px;
+  }
+   
+   
    
 .mapboxgl-popup-content-header>* {
 margin: 0;

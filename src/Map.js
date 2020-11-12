@@ -3,8 +3,8 @@ import mapbox from 'mapbox-gl';
 import './Map.css';
 import places from './data/data.json';
 import slv from './data/sanluisvalley.json';
-// import * as ufoData from './data/ufo.json';
-
+import * as ufoData from './data/ufo.json';
+import * as mtnData from './data/mtns.json';
 
  
 
@@ -38,6 +38,42 @@ class Map extends Component {
         map.addControl(navigationControl, 'bottom-right')
 
         map.scrollZoom.disable();
+
+            // Rael Architects popup
+    const raelCoord = [-105.925708, 37.061179]
+    const raelPopup = new mapbox.Popup()
+
+    raelPopup.setHTML(`
+    <div class="mapboxgl-popup-content-header">
+        <h3>Rael San Fratello</h3>
+        <img alt="Rael San Fratello" src="http://www.rael-sanfratello.com/wp-content/uploads/2009/08/sanfratello_rael.jpg" />
+        
+        <a href="https://www.rael-sanfratello.com/">[ Website ]</a>
+    </div>
+    `)
+
+    raelPopup.on('open', function(){
+        map.flyTo({
+            center: raelCoord,
+            zoom: 12,
+        })
+    });
+    raelPopup.on('close', function(){
+        map.flyTo({
+            center: [app.state.longitude, app.state.latitude],
+            zoom: 8.5,
+        })
+    });
+     
+    // create DOM element for the marker
+    var RaelEl = document.createElement('div');
+    RaelEl.id = 'RaelMarker';
+     
+    // create the marker
+    const raelMarker = new mapbox.Marker(RaelEl)
+    raelMarker.setLngLat(raelCoord)
+    raelMarker.setPopup(raelPopup) // sets a popup on this marker
+    raelMarker.addTo(map);
        
 
 
@@ -120,35 +156,61 @@ class Map extends Component {
             });
     });
 
-    // // Maping UFO Data       
-    // ufoData.features.forEach((ufo) =>{
-    //     const ufoCoord = [ufo.geometry.coordinates[0],ufo.geometry.coordinates[1]]
-    //     const ufoPopup = new mapbox.Popup({
-    //         closeButton: false,
-    //         });
+    // Maping UFO Data       
+    ufoData.features.forEach((ufo) =>{
+        const ufoCoord = [ufo.geometry.coordinates[0],ufo.geometry.coordinates[1]]
+        const ufoPopup = new mapbox.Popup({
+            closeButton: false,
+            });
 
 
-    //     console.log(ufo.properties.Name)
-    //     ufoPopup.setHTML(`
-    //     <div class="mapboxgl-popup-content-header">
-    //         UFO Sighting
-    //         <h3>${ufo.properties.Name}</h3>
-    //         ${ufo.properties.description}
+        console.log(ufo.properties.Name)
+        ufoPopup.setHTML(`
+        <div class="mapboxgl-popup-content-header">
+            UFO Sighting
+            <h3>${ufo.properties.Name}</h3>
+            ${ufo.properties.description}
 
-    //     </div>
-    //     `)
+        </div>
+        `)
 
-    //     const ufoEl = document.createElement('div');
-    //     ufoEl.id = 'ufo-marker';
+        const ufoEl = document.createElement('div');
+        ufoEl.id = 'ufo-marker';
         
         
-    //     const ufoMarker = new mapbox.Marker(ufoEl)
-    //     ufoMarker.setLngLat(ufoCoord)
-    //     ufoMarker.setPopup(ufoPopup)
-    //     ufoMarker.addTo(map);
+        const ufoMarker = new mapbox.Marker(ufoEl)
+        ufoMarker.setLngLat(ufoCoord)
+        ufoMarker.setPopup(ufoPopup)
+        ufoMarker.addTo(map);
 
  
-    // });
+    });
+
+
+            // Maping Mountain Data       
+            mtnData.features.forEach((mtn) =>{
+                const mtnCoord = [mtn.geometry.coordinates[0],mtn.geometry.coordinates[1]]
+                const mtnPopup = new mapbox.Popup();
+        
+        
+                
+                mtnPopup.setHTML(`
+                <div class="mapboxgl-popup-content-header">
+                    <h3>${mtn.properties.Name}</h3>    
+                </div>
+                `)
+        
+                const mtnEl = document.createElement('div');
+                mtnEl.id = 'mtn-marker';
+                
+                
+                const mtnMarker = new mapbox.Marker(mtnEl)
+                mtnMarker.setLngLat(mtnCoord)
+                mtnMarker.setPopup(mtnPopup)
+                mtnMarker.addTo(map);
+        
+            
+            });
     
         
     // Mapping of Project data
@@ -184,41 +246,7 @@ class Map extends Component {
         marker.addTo(map);
     });
 
-    // Rael Architects popup
-    const raelCoord = [-105.925708, 37.061179]
-    const raelPopup = new mapbox.Popup()
 
-    raelPopup.setHTML(`
-    <div class="mapboxgl-popup-content-header">
-        <h3>Rael San Fratello</h3>
-        <img alt="Rael San Fratello" src="http://www.rael-sanfratello.com/wp-content/uploads/2009/08/sanfratello_rael.jpg" />
-        
-        <a href="https://www.rael-sanfratello.com/">[ Website ]</a>
-    </div>
-    `)
-
-    raelPopup.on('open', function(){
-        map.flyTo({
-            center: raelCoord,
-            zoom: 12,
-        })
-    });
-    raelPopup.on('close', function(){
-        map.flyTo({
-            center: [app.state.longitude, app.state.latitude],
-            zoom: 8.5,
-        })
-    });
-     
-    // create DOM element for the marker
-    var RaelEl = document.createElement('div');
-    RaelEl.id = 'RaelMarker';
-     
-    // create the marker
-    const raelMarker = new mapbox.Marker(RaelEl)
-    raelMarker.setLngLat(raelCoord)
-    raelMarker.setPopup(raelPopup) // sets a popup on this marker
-    raelMarker.addTo(map);
 }
 
 
