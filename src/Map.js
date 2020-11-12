@@ -3,7 +3,7 @@ import mapbox from 'mapbox-gl';
 import './Map.css';
 import places from './data/data.json';
 import slv from './data/sanluisvalley.json';
-import * as ufoData from './data/ufo.json';
+// import * as ufoData from './data/ufo.json';
 
 
  
