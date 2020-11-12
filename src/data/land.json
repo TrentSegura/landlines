@@ -1,0 +1,25 @@
+{
+"type": "FeatureCollection",
+"name": "Landforms & Land Use",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "Name": "San Antonio Mountain", "tessellate": -1, "extrude": 0, "visibility": -1 }, "geometry": { "type": "Point", "coordinates": [ -106.0189076, 36.8597379, 0.0 ] } },
+{ "type": "Feature", "properties": { "Name": "Ute Mountain", "tessellate": -1, "extrude": 0, "visibility": -1 }, "geometry": { "type": "Point", "coordinates": [ -105.6839004, 36.9375203, 0.0 ] } },
+{ "type": "Feature", "properties": { "Name": "Rio Grande Headwaters", "tessellate": -1, "extrude": 0, "visibility": -1 }, "geometry": { "type": "Point", "coordinates": [ -105.8946542, 37.4971601, 0.0 ] } },
+{ "type": "Feature", "properties": { "Name": "San Juan volcanic field", "tessellate": -1, "extrude": 0, "visibility": -1 }, "geometry": { "type": "Point", "coordinates": [ -106.774444, 37.893333, 0.0 ] } },
+{ "type": "Feature", "properties": { "Name": "Brendan Falls", "tessellate": -1, "extrude": 0, "visibility": -1 }, "geometry": { "type": "Point", "coordinates": [ -106.5573497, 37.0664382, 0.0 ] } },
+{ "type": "Feature", "properties": { "Name": "Wheeler Geological Area", "tessellate": -1, "extrude": 0, "visibility": -1 }, "geometry": { "type": "Point", "coordinates": [ -106.784, 37.884, 0.0 ] } },
+{ "type": "Feature", "properties": { "Name": "San Luis Valley", "tessellate": -1, "extrude": 0, "visibility": -1 }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -106.1165103, 38.5140522, 0.0 ], [ -106.5703534, 37.8163693, 0.0 ], [ -106.3888515, 37.6597904, 0.0 ], [ -106.3613469, 37.2450087, 0.0 ], [ -106.1346848, 36.8802903, 0.0 ], [ -105.8333693, 36.5677694, 0.0 ], [ -105.6091295, 36.8051983, 0.0 ], [ -105.3383715, 37.3412604, 0.0 ], [ -105.3383609, 37.6554293, 0.0 ], [ -105.6463522, 37.9509384, 0.0 ], [ -105.7540188, 38.2456886, 0.0 ], [ -106.1165103, 38.5140522, 0.0 ] ] ] } },
+{ "type": "Feature", "properties": { "Name": "Alamosa National Wildlife Refuge and Visitor Center", "tessellate": -1, "extrude": 0, "visibility": -1 }, "geometry": { "type": "Point", "coordinates": [ -105.8030248, 37.4387868, 0.0 ] } },
+{ "type": "Feature", "properties": { "Name": "Baca National Wildlife Refuge", "tessellate": -1, "extrude": 0, "visibility": -1 }, "geometry": { "type": "Point", "coordinates": [ -105.7751294, 37.8610774, 0.0 ] } },
+{ "type": "Feature", "properties": { "Name": "Blanca Wetlands, BLM", "tessellate": -1, "extrude": 0, "visibility": -1 }, "geometry": { "type": "Point", "coordinates": [ -105.7108199, 37.5613206, 0.0 ] } },
+{ "type": "Feature", "properties": { "Name": "Monte Vista National Wildlife Refuge", "tessellate": -1, "extrude": 0, "visibility": -1 }, "geometry": { "type": "Point", "coordinates": [ -106.1485448, 37.4859649, 0.0 ] } },
+{ "type": "Feature", "properties": { "Name": "Russell Lakes", "tessellate": -1, "extrude": 0, "visibility": -1 }, "geometry": { "type": "Point", "coordinates": [ -106.1270363, 37.9441157, 0.0 ] } },
+{ "type": "Feature", "properties": { "Name": "San Luis Lake", "tessellate": -1, "extrude": 0, "visibility": -1 }, "geometry": { "type": "Point", "coordinates": [ -105.7230733, 37.6741681, 0.0 ] } },
+{ "type": "Feature", "properties": { "Name": "Colorado Gators Reptile Park", "tessellate": -1, "extrude": 0, "visibility": -1 }, "geometry": { "type": "Point", "coordinates": [ -105.8701422, 37.706023, 0.0 ] } },
+{ "type": "Feature", "properties": { "Name": "King Turquoise Mine", "description": "https:\/\/www.mindat.org\/loc-6088.html", "tessellate": -1, "extrude": 0, "visibility": -1 }, "geometry": { "type": "Point", "coordinates": [ -105.7608508, 37.1744575, 0.0 ] } },
+{ "type": "Feature", "properties": { "Name": "CSU Potato Farm", "tessellate": -1, "extrude": 0, "visibility": -1 }, "geometry": { "type": "Point", "coordinates": [ -106.1442975, 37.7064567, 0.0 ] } },
+{ "type": "Feature", "properties": { "Name": "CSU Ag Test Plots", "tessellate": -1, "extrude": 0, "visibility": -1 }, "geometry": { "type": "Point", "coordinates": [ -106.1348561, 37.7107516, 0.0 ] } },
+{ "type": "Feature", "properties": { "Name": "Pikes Peak", "tessellate": -1, "extrude": 0, "visibility": -1 }, "geometry": { "type": "Point", "coordinates": [ -105.0422595, 38.8408707, 0.0 ] } }
+]
+}

@@ -10,6 +10,17 @@ body {
   color: #272722;
 }
 
+
+a{
+  color: #272727;
+}
+
+a:hover{
+  text-decoration: none;
+
+}
+
+
 ::selection {
     background: #272727;
     color: #fff;
@@ -21,11 +32,10 @@ h1{
 
 
 section.about{
-    max-width: 85vw;
+    max-width: 60ch;
     min-height: 100vh;
-    margin: 0 auto;
+    margin: 0 7.5vw;
     padding: 7.5vw 0;
-
     line-height: 28px;
     font-size: 19px;
 }
@@ -34,6 +44,30 @@ span.lede{
     font-weight: 800;
     text-transform: uppercase;
 }
+
+div.contributors{
+  padding-top: calc(7.5vw/2);
+}
+
+.contributors h3{
+  text-transform: uppercase;
+}
+
+.contributors ul{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@media(min-width: 660px){
+  .contributors-container{
+    display: flex;
+    justify-content: space-between;
+  }
+  
+}
+
+
 
 
 
@@ -51,7 +85,7 @@ span.lede{
     left: 0;
     height: 60vh;
     width: 100vw;
-    background-color: #272727;
+    background-color: #222222;
     z-index: -10;
     color: #fff;
     display: flex;
@@ -80,6 +114,10 @@ span.lede{
 .mm-name>*{
     width: 50%;
 
+}
+
+#mce-EMAIL{
+  width: 100%
 }
 
 
