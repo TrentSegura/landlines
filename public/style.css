@@ -20,11 +20,68 @@ a:hover{
 
 }
 
-
 ::selection {
     background: #272727;
     color: #fff;
   }
+
+/* 
+////////////////////////////////////
+
+HEADER + MAP Cotainer
+
+///////////////////////////////////
+*/
+
+body>*{
+  margin:0;
+}
+
+
+.Map{
+  position: relative;
+}
+
+.Mapoverlay{
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 20px 30px;
+  z-index: 1;
+  background-color: #131312;
+  width: 100%;
+  color: #fff;
+  font-size: 64px;
+  text-shadow: 0 0 15px rgba(0,0,0,0.6);
+}
+
+.Mapoverlay>*{
+  margin: 0;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+.Mapoverlay h1{
+  font-size: 24px;
+}
+
+.Mapoverlay h2{
+  font-weight: 400;
+  font-size: 20px;
+}
+
+div#map {
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+  background: black;
+}
+
+@media (max-width: 600px){
+  div#map{
+      height: 85vh;
+  }
+}
 
 h1{
   font-weight: 800;
@@ -85,7 +142,7 @@ div.contributors{
     left: 0;
     height: 60vh;
     width: 100vw;
-    background-color: #222222;
+    background-color: #121212;
     z-index: -10;
     color: #fff;
     display: flex;

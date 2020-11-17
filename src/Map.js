@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import mapbox from 'mapbox-gl';
 import './Map.css';
 import places from './data/data.json';
-import slv from './data/sanluisvalley.json';
+// import slv from './data/sanluisvalley.json';
 import * as ufoData from './data/ufo.json';
 import * as mtnData from './data/mtns.json';
 
@@ -26,7 +26,7 @@ class Map extends Component {
         const map = new mapbox.Map({
             container: 'map',
             style: app.state.style,
-            // zoom: 9,
+            zoom: 9,
             maxZoom: 12,
             minZoom: 6,
             center: [app.state.longitude, app.state.latitude],
@@ -46,9 +46,10 @@ class Map extends Component {
     raelPopup.setHTML(`
     <div class="mapboxgl-popup-content-header">
         <h3>Rael San Fratello</h3>
-        <img alt="Rael San Fratello" src="http://www.rael-sanfratello.com/wp-content/uploads/2009/08/sanfratello_rael.jpg" />
-        
-        <a href="https://www.rael-sanfratello.com/">[ Website ]</a>
+    </div>
+    <img alt="Rael San Fratello" src="http://www.rael-sanfratello.com/wp-content/uploads/2009/08/sanfratello_rael.jpg" />
+    <div class="description">
+        <a href="https://www.rael-sanfratello.com/" class="card-btn">Website</a>
     </div>
     `)
 
@@ -78,26 +79,22 @@ class Map extends Component {
 
 
         // San Luis Valley Cut Out
-        map.on('load', function () {
-            map.addSource('route', {
-            'type': 'geojson',
-            'data': slv
-        });
-        map.addLayer({
-            'id': 'route',
-            'type': 'fill',
-            'source': 'route',
-            'layout': {},
-            'paint': {
-                'fill-color': '#000',
-                'fill-opacity': 0.9,
-            }
-        })
-
-
-
-
-    });
+    //     map.on('load', function () {
+    //         map.addSource('route', {
+    //         'type': 'geojson',
+    //         'data': slv
+    //     });
+    //     map.addLayer({
+    //         'id': 'route',
+    //         'type': 'fill',
+    //         'source': 'route',
+    //         'layout': {},
+    //         'paint': {
+    //             'fill-color': '#000',
+    //             'fill-opacity': 0.9,
+    //         }
+    //     })
+    // });
 
 
     map.on('load', function () {
@@ -159,9 +156,7 @@ class Map extends Component {
     // Maping UFO Data       
     ufoData.features.forEach((ufo) =>{
         const ufoCoord = [ufo.geometry.coordinates[0],ufo.geometry.coordinates[1]]
-        const ufoPopup = new mapbox.Popup({
-            closeButton: false,
-            });
+        const ufoPopup = new mapbox.Popup();
 
 
         console.log(ufo.properties.Name)
@@ -169,6 +164,8 @@ class Map extends Component {
         <div class="mapboxgl-popup-content-header">
             UFO Sighting
             <h3>${ufo.properties.Name}</h3>
+        </div>
+        <div class="description">    
             ${ufo.properties.description}
 
         </div>
@@ -187,30 +184,25 @@ class Map extends Component {
     });
 
 
-            // Maping Mountain Data       
-            mtnData.features.forEach((mtn) =>{
-                const mtnCoord = [mtn.geometry.coordinates[0],mtn.geometry.coordinates[1]]
-                const mtnPopup = new mapbox.Popup();
+    // Maping Mountain Data       
+    mtnData.features.forEach((mtn) =>{
+        const mtnCoord = [mtn.geometry.coordinates[0],mtn.geometry.coordinates[1]]
+        const mtnPopup = new mapbox.Popup();
         
+        mtnPopup.setHTML(`
+        <div class="mapboxgl-popup-content-header">
+            <h3>${mtn.properties.Name}</h3>    
+        </div>
+        `)
+
+        const mtnEl = document.createElement('div');
+        mtnEl.id = 'mtn-marker';
         
-                
-                mtnPopup.setHTML(`
-                <div class="mapboxgl-popup-content-header">
-                    <h3>${mtn.properties.Name}</h3>    
-                </div>
-                `)
-        
-                const mtnEl = document.createElement('div');
-                mtnEl.id = 'mtn-marker';
-                
-                
-                const mtnMarker = new mapbox.Marker(mtnEl)
-                mtnMarker.setLngLat(mtnCoord)
-                mtnMarker.setPopup(mtnPopup)
-                mtnMarker.addTo(map);
-        
-            
-            });
+        const mtnMarker = new mapbox.Marker(mtnEl)
+        mtnMarker.setLngLat(mtnCoord)
+        mtnMarker.setPopup(mtnPopup)
+        mtnMarker.addTo(map);
+    });
     
         
     // Mapping of Project data

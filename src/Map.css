@@ -1,0 +1,30 @@
+/* /* 
+Embeded mapbox styles
+*/
+ 
+.mapboxgl-popup-anchor-bottom .mapboxgl-popup-tip {
+    border-top-color: #121212;
+}
+
+.mapboxgl-popup-anchor-top .mapboxgl-popup-tip {
+    border-bottom-color: #121212;
+}
+
+.mapboxgl-popup-anchor-right .mapboxgl-popup-tip {
+    border-left-color: #121212;
+}
+
+.mapboxgl-popup-anchor-left .mapboxgl-popup-tip {
+    border-right-color: #121212;
+}
+
+div.mapboxgl-popup-content{
+    background-color: #121212;
+    color: #fff;
+}
+
+
+.mapboxgl-popup-close-button{
+    color: #fff
+}
+

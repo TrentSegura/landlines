@@ -1,49 +1,4 @@
-body>*{
-  margin:0;
-}
 
-
-.Map{
-  position: relative;
-}
-
-.Mapoverlay{
-  position: absolute;
-  top: 02vw;
-  left: 2vw;
-  z-index: 1;
-  color: #fff;
-  font-size: 64px;
-  text-shadow: 0 0 15px rgba(0,0,0,0.6);
-}
-
-.Mapoverlay>*{
-  margin: 0;
-  text-transform: uppercase;
-  line-height: 1;
-}
-
-.Mapoverlay h1{
-  font-size: 64px;
-}
-
-.Mapoverlay h2{
-  font-weight: 400;
-  font-size: 36px;
-}
-
-div#map {
-  width: 100vw;
-  height: 100vh;
-  z-index: 1;
-  background: black;
-}
-
-@media (max-width: 600px){
-  div#map{
-      height: 85vh;
-  }
-}
 
 #marker {
   background-image: url('./images/landlines-marker_07.svg');
@@ -68,10 +23,11 @@ div#map {
   #RaelMarker{
     background-image: url('./images/raelsanfratello.jpg');
     background-size: cover;
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     cursor: pointer;
     border-radius: 50%;
+    border: 1px solid #fff;
   }
 
 
@@ -97,13 +53,8 @@ div#map {
 }
 
   #ufo-marker::after{
-    content: "🛸";
-    font-size: 30px;
-  }
-
-  #art-marker::after{
-    content: "🎨";
-    font-size: 30px;
+    content: "⚪";
+    font-size: 10px;
   }
 
   #mtn-marker::after{
@@ -111,18 +62,51 @@ div#map {
     font-size: 30px;
   }
    
-   
+.mapboxgl-popup-content>*{
+  margin: 0;
+}
    
 .mapboxgl-popup-content-header>* {
-margin: 0;
-line-height: 1.3;
-}
+  margin: 0;
+  line-height: 1.3;
+  }
 
 .mapboxgl-popup-content-header{
-margin: 5px 0;
+  padding: 10px 10px 10px 10px;
+  background-color: #121212;
+  color: #fff;
 }
 
 .description{
   font-size: 12px;
   line-height: 1.4;
+  padding: 10px 10px 20px 10px;
+  color: #fff;
+  margin: 0;
+}
+
+.description img{
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.description a{
+  color: #fff;
+}
+
+.desicription a:hover{
+  color: #FC5E4D;
+}
+
+.card-btn{
+  display:  inline-block;
+  padding: 5px 7px;
+  border: #fff 1px solid;
+  margin-left: auto;
+}
+
+
+.mapboxgl-popup-content {
+  padding: 0;
 }
