@@ -40,7 +40,7 @@ class Map extends Component {
             const landCoord = [landmark.longitude, landmark.latitude]
             const landPopup = new mapbox.Popup()
          
-            landPopup .setMaxWidth("300px")
+            landPopup.setMaxWidth("300px")
             landPopup.setHTML(`
             <div class="mapboxgl-popup-content-header">
                 <h3>${landmark.name}</h3>
