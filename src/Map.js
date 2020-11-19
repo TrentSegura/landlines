@@ -51,18 +51,7 @@ class Map extends Component {
             <a href=${landmark.url} class="card-btn">Website </a>
             </div>
             `)
-            landPopup.on('open', function(){
-                map.flyTo({
-                    center: [landmark.longitude, (landmark.latitude + .015)],
-                    zoom: 12,
-                })
-            });
-            landPopup.on('close', function(){
-                map.flyTo({
-                    center: [app.state.longitude, app.state.latitude],
-                    zoom: 8.5,
-                })
-            });
+
     
             var el = document.createElement('div');
             el.id = 'landmarker';
