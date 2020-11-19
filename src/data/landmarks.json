@@ -1,0 +1,27 @@
+[
+
+    {
+        "id": 0,
+        "name": "M12 STUDIO at Rancho La Florida",
+        "latitude": 37.061213,
+        "longitude":-105.825755,
+        "image": "m12_rancho_01.jpg",
+        "icon": "m12_rancho-icon_01.jpg",
+        "description":"",
+        "url":"https://m12studio.org"
+    },
+    
+    {
+        "id": 1,
+        "name": "Rael San Fratello",
+        "location": "Rancho La Florida",
+        "latitude": 37.061179,
+        "longitude":-105.92708,
+        "image": "raelsanfratello.jpg",
+        "icon": "raelsanfratell_icon.jpg",
+        "description":"",
+        "url":"https://www.rael-sanfratello.com/"
+    }
+       
+
+]

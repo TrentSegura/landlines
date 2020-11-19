@@ -3,19 +3,18 @@ import Map from './Map';
 import './App.css';
 
 
+
 class App extends Component {
 
   // toggle maps ??
   constructor(props){
     super(props)
-
-    
+   
     this.state = {
       map: null,
-      latitude: 37.548004,
+      latitude: 37.547004,
       longitude: -106.113384,
-      style: "mapbox://styles/m12-trent/ckg9xlrw62gxc19lc9hbaylmf",
-      // style: "mapbox://styles/mapbox/satellite-v9",         
+      style: "mapbox://styles/m12-trent/ckg9xlrw62gxc19lc9hbaylmf"        
     }
   }
 
@@ -29,8 +28,6 @@ class App extends Component {
           <h1>Landlines</h1>
           <h2>M12 Studio</h2>
         </div>
-
-
       </div>
     );
   }

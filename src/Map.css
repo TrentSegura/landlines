@@ -20,7 +20,7 @@ Embeded mapbox styles
 
 div.mapboxgl-popup-content{
     background-color: #121212;
-    color: #fff;
+    color: rgb(218, 218, 218);
 }
 
 
